@@ -1,9 +1,23 @@
 package web.model;
 
+import org.hibernate.annotations.GeneratorType;
+
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "cars")
 public class Car {
-    public String model;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column
+    private String model;
+    @Column
     private String color;
+    @Column
     private int year;
+    @Column
     private double price;
 
     public Car(String model, String color, int year, double price) {
@@ -11,6 +25,18 @@ public class Car {
         this.color = color;
         this.year = year;
         this.price = price;
+    }
+
+    public Car() {
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getModel() {
