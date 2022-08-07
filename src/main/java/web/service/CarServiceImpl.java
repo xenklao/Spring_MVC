@@ -13,11 +13,11 @@ public class CarServiceImpl implements CarService {
         List<Car> carList;
         {
             carList = new ArrayList<>();
-            carList.add(new Car("Honda", "Fit", 2006));
-            carList.add(new Car("Mercedes-Benz", "G-Class", 2004));
-            carList.add(new Car("Lexus", "LX570", 2019));
-            carList.add(new Car("Toyota", "Camry", 2018));
-            carList.add(new Car("Kia", "Rio", 2020));
+            carList.add(new Car("Mazda", "6", 2011));
+            carList.add(new Car("KIA", "Sorento", 2020));
+            carList.add(new Car("Honda", "Accord", 2014));
+            carList.add(new Car("BMW", "6", 2012));
+            carList.add(new Car("Mazda", "3", 2011));
         }
         return carList.stream().limit(count).collect(Collectors.toList());
     }
