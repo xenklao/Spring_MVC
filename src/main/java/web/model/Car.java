@@ -1,5 +1,8 @@
 package web.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+
 public class Car {
 
     private String model;
